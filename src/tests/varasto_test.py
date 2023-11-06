@@ -64,6 +64,3 @@ class TestVarasto(unittest.TestCase):
     def test_stringi_toimii_oikein(self):
         tmp = f"{self.varasto}"
         self.assertEqual(tmp, "saldo = 0, vielä tilaa 10")
-
-    def test_rikkinain_testi(self):
-        self.assertEqual(self.varasto.tilavuus, 12)
