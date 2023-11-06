@@ -57,7 +57,7 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.saldo, 2)
 
     def test_liikaa_ottaminen_tyhjentaa_varaston(self):
-        self.varasto.lisaa_varastoon(4)
+        self.varasto.lisaa_varastoon(3)
         self.varasto.ota_varastosta(9)
         self.assertAlmostEqual(self.varasto.saldo, 0)
 
