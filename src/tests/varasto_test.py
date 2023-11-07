@@ -64,3 +64,7 @@ class TestVarasto(unittest.TestCase):
     def test_stringi_toimii_oikein(self):
         tmp = f"{self.varasto}"
         self.assertEqual(tmp, "saldo = 0, vielä tilaa 10")
+
+    def test_negatiivinen_alkusaldo_nollataan(self):
+        self.varasto = Varasto(10, -10)
+        self.assertEqual(self.varasto.saldo, 0)
