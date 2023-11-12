@@ -1,22 +1,21 @@
 from varasto import Varasto
 
 
-def main(): #Onkohan mahdollista luoda liian pitkä rivi kommentilla? En tiedä, mutta tämä on varmaankin paras tapa kokeilla sitä. T3
+def main():
     mehua = Varasto(100.0)
     olutta = Varasto(100.0, 20.2)
 
     print("Luonnin jälkeen:")
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
-    for x in range(1,11): #T3
-        for y in range(1,11): #T3
-            for z in range(1,11): #T3
-                print(y)
     print("Olut getterit:")
     print(f"saldo = {olutta.saldo}")
     print(f"tilavuus = {olutta.tilavuus}")
     print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
 
+    vaihe_eka(mehua, olutta)
+
+def vaihe_eka(mehua, olutta):
     print("Mehu setterit:")
     print("Lisätään 50.7")
     mehua.lisaa_varastoon(50.7)
@@ -30,6 +29,9 @@ def main(): #Onkohan mahdollista luoda liian pitkä rivi kommentilla? En tiedä,
     huono = Varasto(-100.0)
     print(huono)
 
+    vaihe_toka(mehua, olutta)
+
+def vaihe_toka(mehua, olutta):
     print("Varasto(100.0, -50.7)")
     huono = Varasto(100.0, -50.7)
     print(huono)
@@ -44,6 +46,9 @@ def main(): #Onkohan mahdollista luoda liian pitkä rivi kommentilla? En tiedä,
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")
 
+    vaihe_kolmas(mehua, olutta)
+
+def vaihe_kolmas(mehua, olutta):
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
     saatiin = olutta.ota_varastosta(1000.0)
@@ -55,7 +60,6 @@ def main(): #Onkohan mahdollista luoda liian pitkä rivi kommentilla? En tiedä,
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
-
 
 if __name__ == "__main__":
     main()
