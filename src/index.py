@@ -1,14 +1,17 @@
 from varasto import Varasto
 
 
-def main():
+def main(): #Onkohan mahdollista luoda liian pitkä rivi kommentilla? En tiedä, mutta tämä on varmaankin paras tapa kokeilla sitä. T3
     mehua = Varasto(100.0)
     olutta = Varasto(100.0, 20.2)
 
     print("Luonnin jälkeen:")
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
-
+    for x in range(1,11): #T3
+        for y in range(1,11): #T3
+            for z in range(1,11): #T3
+                print(y)
     print("Olut getterit:")
     print(f"saldo = {olutta.saldo}")
     print(f"tilavuus = {olutta.tilavuus}")
